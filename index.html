@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Heebo&family=Play&family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css/styles.css">
+
+    <title>ShopBoutique</title>
+</head>
+
+<body>
+
+
+      
+
+  
+
+<!-- Header -->
+    <nav class="menu">
+        <label class="logo">
+            <img src="/img/logo-removebg-preview.png" alt="logo" class="logo__img">
+        </label>
+        <ul class="menu_items">
+            <li class="active"><a href="#">Inicio</a></li>
+            <li><a href="/secciones/nosotros.html">Nosotros</a></li>
+            <li><a href="/secciones/contacto.html">Contacto</a></li>
+            <li><button type="button" class="btn-menu" data-pushbar-target="pushbar-carrito" data-bs-toggle="modal" data-bs-target="#myModal"><i class="bi bi-bag-heart"></i></button></li>
+        </ul>
+        <span class="btn_menu">
+            <i class="bi bi-list"></i>
+        </span>
+    </nav>
+
+    <!-- Modal -->
+
+    <div class="modal fade" id="myModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Tu Carrito</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="modal-container">
+              
+            </div>
+            <div class="modal-footer content-flex">
+                <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="vaciar-carrito">Vaciar Carrito y Cerrar</button>
+              <button type="button" class="btn btn-primary button-send">Comprar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- 
+      
+
+    <!-- Hero -->
+    <section id="hero">
+        <article>
+            <h4>Tienda-Online</h4>
+            <h2>Tenemos ofertas</h2>
+            <h1>En todos los productos</h1>
+            <p>Guardá tu cupon de descuento con 70% off!</p>
+            <button><a href="#contenedor-productos">Compra Ahora</a></button>
+        </article>
+        <article>
+            <img src="/img/max-harlynking-nfWp1mCmBpM-unsplash-removebg-preview.png" alt="chica" class="girl__glases">
+        </article>
+       
+    </section>
+
+ 
+
+
+    <!-- Boxs Info -->
+
+    <section id= "feature" class="section-p1">
+        <div class="fe-box">
+            <img src="/img/undraw_my_location_re_r52x.svg" alt="envios" class="img__img">
+            <h6>Envios Gratis</h6>
+        </div>
+        <div class="fe-box">
+            <img src="/img/undraw_online_ad_re_ol62.svg" alt="pedidos" class="img__img img__img--2">
+            <h6>Pedidos Online</h6>
+        </div>
+        <div class="fe-box">
+            <img src="/img/undraw_savings_re_eq4w.svg" alt="ahorro" class="img__img img__img--3">
+            <h6>Ahorra Dinero</h6>
+        </div>
+        <div class="fe-box">
+            <img src="/img/undraw_woman_re_afr8.svg" alt="promos" class="img__img img__img--4">
+            <h6>Promociones</h6>
+        </div>
+        <div class="fe-box">
+            <img src="/img/undraw_happy_news_re_tsbd.svg" alt="happy" class="img__img img__img--4">
+            <h6>Compra Feliz</h6>
+        </div>
+        <div class="fe-box">
+            <img src="/img/undraw_progressive_app_m-9-ms.svg" alt="soporte" class="img__img img__img--4">
+            <h6>Soporte 24hs</h6>
+        </div>
+        
+    </section>
+    
+    <!-- Carousel -->
+
+    <section class="pub__main">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="/img/red bluzo22222.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="/img/GRILDDD.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="/img/LENTES PROMO.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </section>
+
+    <section class="tittle__produc11" id="productos-generales">
+        <h2>Productos Destacados</h2>
+        <p>Coleccion de Invierno y Nuevos modelos</p>
+    </section>
+
+    <!-- Productos -->
+    <main id="contenedor-productos">
+       
+    </main>
+
+
+    
+
+
+    <!-- Banner infos offers -->
+
+    <section id="banner3">
+        <div class="banner-box">
+            <h2>Prendas de Invierno</h2>
+            <h3>Coleccion nueva 20% OFF</h3>
+        </div>
+        <div class="banner-box banner-box2">
+            <h2>Ofertas de Temporada</h2>
+            <h3>Coleccion de verano 40% OFF</h3>
+        </div>
+        <div class="banner-box banner-box3">
+            <h2>Mejora tu Look</h2>
+            <h3>Nuevos Productos!</h3>
+        </div>
+    </section>
+
+
+    <!-- Banner horizontal banner -->
+
+    <section id="newsletter" class="section-p1">
+        <div class="banner-box">
+            <h3>La mejor Tienda Online</h3>
+            <p>No olvides compartir nuestra pagina</p>
+        </div>
+    </section>
+
+    
+
+    <!-- Footer -->
+
+    <footer class="section-p1 section-p1--new">
+        <section class="footer-flex"></section>
+        <div class="footer-box">
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-twitter"></i>
+        </div>
+        <div class="footer-box2">
+            <h2 class="footer-heading">Fashion</h2>
+            <p class="footer-text"> Seguinos en Nuestras redes</p>
+        </div>
+        </section>
+    </footer>
+
+
+    
+<!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>  
+    <script src="/app.js/producto.js"></script> 
+    <script src="./app.js/index.js"></script>
+   
+</body>
+</html>
