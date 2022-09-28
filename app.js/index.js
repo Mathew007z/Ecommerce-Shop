@@ -5,11 +5,19 @@ const carrito = document.getElementById('carrito');
 const  botonVaciar = document.getElementById('vaciar-carrito');
 const precioTotal = document.getElementById('precioTotal');
 const modal = document.getElementById('modal-container');
+const comprar = document.getElementById('btn-comprar');
+const formData = [];
 
 
+// comprar.addEventListener('click',() => {
+//     alert(`Gracias por tu compra, enviaremos informacion a ${formData.value}`)
+// })
 
-
-
+//     const capturarForm = document.getElementById('exampleFormControlInput1');
+//     formData.push(capturarForm.value);
+//     capturarForm == ""
+//     ? alert('ingrese un Email')
+//     : captura();
 
 // DOMContentLoaded
 function aJson (){
@@ -110,11 +118,13 @@ function boxCreate (){
 // Pushear al Array Carrito 
 function pushearCarrito(id){
 
-        const existe = arrayCarrito.some(prod => prod.id === id)
+        const existe = arrayCarrito.some(prod => prod.id == id)
         if(existe){
             const prod = arrayCarrito.map(prod =>{
-                if(prod.id === id){
+                if(prod.id == id){
                     prod.cantidad++;
+                   
+                   
                 }
             })
         }else{
@@ -152,7 +162,9 @@ function renderizarCarrito(){
         eliminar.addEventListener('click', (id) => {
             eliminarDelCarrito(producto.id)
         })
+        
         precioTotal.innerText = arrayCarrito.reduce((acc,producto) => acc + producto.precio, 0);
+        precioTotal.innerText = arrayCarrito.reduce((acc,producto) => acc + producto.cantidad * producto.precio, 0);
 
     
     })
@@ -164,6 +176,7 @@ function renderizarCarrito(){
 botonVaciar.addEventListener('click', () => {
     arrayCarrito.length = 0;
     precioTotal.innerText = arrayCarrito.reduce((acc,producto) => acc - producto.precio, 0);
+    precioTotal.innerText = arrayCarrito.reduce((acc,producto) => acc - producto.cantidad * producto.precio, 0);
     localStorage.setItem('cart', JSON.stringify(arrayCarrito));
     renderizarCarrito();
 })
@@ -171,16 +184,32 @@ botonVaciar.addEventListener('click', () => {
 
 // Eliminar Producto del carrito
 function eliminarDelCarrito(id){
-    arrayCarrito = arrayCarrito.filter(function encontrarProducto(producto){
-        if(producto.id !== id){
-            return producto
 
+        const existe = arrayCarrito.some(prod => prod.id == id)
+        if(existe){
+            const prod = arrayCarrito.map(prod =>{
+                if(prod.id == id){
+                    prod.cantidad--;
+                   
+                   
+                }else{
+                    arrayCarrito = arrayCarrito.filter(function encontrarProducto(producto){
+                        if(producto.id !== id){
+                            return producto
+                
+                        }
+                    })
+                }
+            })
         }
-    })
+  
     precioTotal.innerText = arrayCarrito.reduce((acc,producto) => acc - producto.precio, 0);
+    precioTotal.innerText = arrayCarrito.reduce((acc,producto) => acc - producto.cantidad * producto.precio, 0);
     localStorage.setItem('cart', JSON.stringify(arrayCarrito));
     renderizarCarrito();  
 }
+
+
 
 
 
