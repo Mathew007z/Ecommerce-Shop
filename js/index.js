@@ -9,15 +9,21 @@ const comprar = document.getElementById('btn-comprar');
 const formData = [];
 
 
-// comprar.addEventListener('click',() => {
-//     alert(`Gracias por tu compra, enviaremos informacion a ${formData.value}`)
-// })
 
-//     const capturarForm = document.getElementById('exampleFormControlInput1');
-//     formData.push(capturarForm.value);
-//     capturarForm == ""
-//     ? alert('ingrese un Email')
-//     : captura();
+comprar.addEventListener('click',() => {
+    Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Gracias por tu Compra!',
+        showConfirmButton: false,
+        timer: 1500
+      })
+      arrayCarrito.length = 0;
+      precioTotal.innerText = 0;
+      renderizarCarrito()
+})
+
+
 
 // DOMContentLoaded
 function aJson (){
@@ -174,49 +180,38 @@ function renderizarCarrito(){
 
 // Vaciar Carrito
 botonVaciar.addEventListener('click', () => {
+    Swal.fire({
+        icon: 'error',
+        title: 'Tu carrito fue vaciado',
+        text: '',
+        footer: '<a href="/index.html" </a>'
+      })
     arrayCarrito.length = 0;
     precioTotal.innerText = arrayCarrito.reduce((acc,producto) => acc - producto.precio, 0);
-    precioTotal.innerText = arrayCarrito.reduce((acc,producto) => acc - producto.cantidad * producto.precio, 0);
     localStorage.setItem('cart', JSON.stringify(arrayCarrito));
     renderizarCarrito();
 })
 
 
 // Eliminar Producto del carrito
+
+
 function eliminarDelCarrito(id){
-
-        const existe = arrayCarrito.some(prod => prod.id == id)
-        if(existe){
-            const prod = arrayCarrito.map(prod =>{
-                if(prod.id == id){
-                    prod.cantidad--;
-                   
-                   
-                }else{
-                    arrayCarrito = arrayCarrito.filter(function encontrarProducto(producto){
-                        if(producto.id !== id){
-                            return producto
-                
-                        }
-                    })
-                }
-            })
+    const existe = arrayCarrito.some(prod => prod.id == id)
+if (existe) {
+    arrayCarrito.map(prod =>{
+        if(prod.id == id){
+            prod.cantidad--;
+            if(prod.cantidad < 1){
+                arrayCarrito = arrayCarrito.filter(prod => prod.id != id)
+            }
         }
-  
-    precioTotal.innerText = arrayCarrito.reduce((acc,producto) => acc - producto.precio, 0);
-    precioTotal.innerText = arrayCarrito.reduce((acc,producto) => acc - producto.cantidad * producto.precio, 0);
-    localStorage.setItem('cart', JSON.stringify(arrayCarrito));
-    renderizarCarrito();  
+    })
 }
-
-
-
-
-
-
-
-
-
+precioTotal.innerText = arrayCarrito.reduce((acc,producto) => acc - producto.precio, 0);
+localStorage.setItem('cart', JSON.stringify(arrayCarrito));
+renderizarCarrito();
+}
 
 
 
