@@ -12,12 +12,6 @@
 
 
 
-
-
-
-
-
-
 /*  Reset Global  */
 *::after,
 *::before,
@@ -369,7 +363,6 @@ ul.show{
 
 
 
-
 /* Termina PROPERTYS */
 .pro img{
     max-width: 180px;
@@ -619,12 +612,15 @@ ul.show{
 
 
 .section-p1--new{
+    height: 220px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: row-reverse;
     flex-wrap: wrap;
     background-color: #000;
+    margin-top: 3em;
+   
    
 }
 
@@ -632,12 +628,14 @@ ul.show{
 .footer-box{
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    
     
 }
 
 .footer-box i{
-    margin: 2em;
-    font-size: 30px;
+    margin-bottom: 1em;
+    font-size: 22px;
     color: #fff;
     cursor: pointer;
 }
@@ -655,9 +653,39 @@ ul.show{
      cursor: pointer;
 }
 
+.icon-text{
+    font-size: 16px;
+    text-decoration: none;
+    margin-left: 1em;
+    color: #fff;
+}
 
 
+.icon-text:hover{
+    color: #088178;
+}
 
+.footer-box3{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+.title-box3{
+    font-size: 32px;
+    color: #fff;
+}
+
+.link-box3{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: .5em;
+}
+
+.link-box3:hover{
+    color: #088178;
+}
 
 
 
@@ -1094,6 +1122,17 @@ ul.show{
     margin-right: 3.5em;
 }
 
+
+.section-p1--new{
+    height: 500px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #000;
+    margin-top: 3em;
+   
+   
+}
 
 
 }
