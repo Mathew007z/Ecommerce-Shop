@@ -1,0 +1,62 @@
+[
+    {"id":1, "nombre":"jeanRotura", "marca":"fashion","prenda":"Jean","color":"Celeste gastado","stock":true,"precio":3990,"img":"../img/productos catalogo/jeans1.png","cantidad":1},
+    {"id":2, "nombre":"jeanClasico", "marca":"fashion","prenda":"Jean","color":"Azul Oscuro","stock":true,"precio":3899,"img":"../img/productos catalogo/jeans4.png","cantidad":1},
+    {"id":3, "nombre":"jeanLittleRoturas", "marca":"fashion","prenda":"Jean","color":"Azul Claro","stock":true,"precio":3990,"img":"../img/productos catalogo/jeans3.png","cantidad":1},
+    {"id":4, "nombre":"jeanClasicoRecto", "marca":"fashion","prenda":"Jean","color":"Azul gastado","stock":true,"precio":3799,"img":"../img/productos catalogo/jeans6.png","cantidad":1},
+    {"id":5, "nombre":"jeanRosa", "marca":"fashion","prenda":"Jean","color":"Rosa","stock":true,"precio":3799,"img":"../img/productos catalogo/jens2.png","cantidad":1},
+
+
+
+
+    {"id":6, "nombre":"buzoPink", "marca":"fashion","prenda":"Buzo","color":"Rosa","stock":true,"precio":3499,"img":"../img/productos catalogo/buzo2.png","cantidad":1},
+    {"id":7, "nombre":"buzoEstampaEspalda", "marca":"fashion","prenda":"Buzo","color":"Celeste","stock":true,"precio":3599,"img":"../img/productos catalogo/camp1.png","cantidad":1},
+    {"id":8, "nombre":"buzoWhite", "marca":"fashion","prenda":"Buzo","color":"Blanco","stock":true,"precio":3499,"img":"../img/productos catalogo/buzo4.png","cantidad":1},
+    {"id":9, "nombre":"buzoGreen", "marca":"fashion","prenda":"Buzo","color":"Verde","stock":true,"precio":3499,"img":"../img/productos catalogo/buzo1.png","cantidad":1},
+    {"id":10, "nombre":"buzoCorto", "marca":"fashion","prenda":"Buzo","color":"Gris Oscuro","stock":true,"precio":3499,"img":"../img/productos catalogo/buzo3.png","cantidad":1},
+
+
+
+
+    {"id":11, "nombre":"camperaCorta", "marca":"fashion","prenda":"Campera","color":"Violeta","stock":true,"precio":3799,"img":"../img/productos catalogo/camp3.png","cantidad":1},
+    {"id":12, "nombre":"camperaDeJean", "marca":"fashion","prenda":"Campera","color":"Color Jean","stock":true,"precio":4200,"img":"../img/productos catalogo/camp2.png","cantidad":1},
+    {"id":13, "nombre":"camperaRoja", "marca":"fashion","prenda":"Campera","color":"Red","stock":true,"precio":7800,"img":"../img/productos catalogo/camp4.png","cantidad":1},
+    {"id":14, "nombre":"camperaAzul", "marca":"fashion","prenda":"Campera","color":"Azul","stock":true,"precio":3899,"img":"../img/productos catalogo/camp5.png","cantidad":1},
+    
+
+
+
+    {"id":15, "nombre":"remeraSublimada", "marca":"fashion","prenda":"Remera","color":"Negro con gris","stock":true,"precio":1999,"img":"../img/productos catalogo/reme2.png","cantidad":1},
+    {"id":16, "nombre":"remeraCirculo", "marca":"fashion","prenda":"Remera","color":"Negro","stock":true,"precio":1999,"img":"../img/productos catalogo/reme5.png","cantidad":1},
+    {"id":17, "nombre":"remeraLove", "marca":"fashion","prenda":"Remera","color":"Marron","stock":true,"precio":1999,"img":"../img/productos catalogo/reme3.png","cantidad":1},
+    {"id":18, "nombre":"remeraLisa", "marca":"fashion","prenda":"Remera","color":"Blanca","stock":true,"precio":1999,"img":"../img/productos catalogo/reme4.png","cantidad":1},
+    {"id":19, "nombre":"remeraCortaGris", "marca":"fashion","prenda":"Remera","color":"Gris","stock":true,"precio":3499,"img":"../img/productos catalogo/reme1.png","cantidad":1},
+    {"id":20, "nombre":"zapatillasBlack", "marca":"fashion","prenda":"Zapatilla","color":"Negro","stock":true,"precio":5799,"img":"../img/productos catalogo/zapas3.png","cantidad":1}
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
