@@ -108,62 +108,28 @@ function boxCreate (){
 
 
 
-function pushearCarrito(){
-    fetch("/js/data.json")
-    .then((resp)=> resp.json())
-    .then((data)=>{
-        console.log(data);
-        // if(arrayCarrito.find((prod) => e.target.prod.id === prodId)){
-        //     const i = arrayCarrito.find((prod) => prod.id === prodId);
-        //     i.cantidad++;
-        // }
-        // else{
-        //     const i = data.find((prod) => e.target.prod.id === prodId);
-        //     arrayCarrito.push(i);
-        // }
-        // localStorage.setItem('cart', JSON.stringify(arrayCarrito));
-        // renderizarCarrito()
+function pushearCarrito(id) {
+    fetch('/js/data.json')
+    .then((resp) => resp.json())
+    .then((data) => {
+        data.forEach((producto) =>{
+            if(producto.id == id){
+                const existe = arrayCarrito.some((prod) => prod.id == id);
+                if(existe){
+                    arrayCarrito.map((prod) => {
+                        if(prod.id == id){
+                            prod.cantidad++;
+                        }
+                    })
+                }else{
+                    arrayCarrito.push({...producto, cantidad:1});
+                }
+            }
+        })
+        localStorage.setItem('cart', JSON.stringify(arrayCarrito));
+        renderizarCarrito();
     })
 }
-
-
-// // Pushear al Array Carrito 
-// function pushearCarrito(id){
-
-    
-//     fetch("/js/data.json")
-//     .then((response)=> response.json())
-//     .then((data)=>{
-//         console.log(data)
-//         data.forEach((prod) =>{
-//             const existe = arrayCarrito.some(prod => prod.id == id.target.id)
-//             if(existe){
-//                 const prod = arrayCarrito.map(prod =>{
-//                     if(prod.id == id.target.id){
-//                         prod.cantidad++;
-                        
-//                     }
-//                 })
-//             }else{
-//                 const producto = productos2.find(function encontrarProducto(producto){
-//                     if(producto.id == id.target.id){
-//                         return producto;
-//                     }
-//                 })
-//                 arrayCarrito.push(producto);
-//             }
-        
-            
-//           localStorage.setItem('cart', JSON.stringify(arrayCarrito));
-          
-//         renderizarCarrito();
-//         })
-//         }
-      
-    
-
-// )};
-
 
 
 
