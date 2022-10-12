@@ -11,6 +11,8 @@ const badge = document.getElementById('badge');
 const cartLogo = document.querySelector(".agregar__carrito");
 
 
+
+
 comprar.addEventListener('click',() => {
     Swal.fire({
         position: 'center',
